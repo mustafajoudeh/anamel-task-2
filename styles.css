@@ -1,0 +1,459 @@
+
+/* =========================
+   1. Colors
+========================= */
+
+:root {
+    --primary: #ff6b9d;
+    --light-pink: #fff0f5;
+    --dark: #333;
+    --gray: #666;
+    --white: #fff;
+    --border: #eee;
+}
+
+
+/* =========================
+   2. Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================
+   3. Header / Navbar
+========================= */
+
+body > header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+}
+
+
+/* Logo */
+
+.logo-link {
+    display: block;
+}
+
+.logo {
+    width: 90px;
+    display: block;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--dark);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+
+/* Login / Signup */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn {
+    color: var(--dark);
+}
+
+.login-btn:hover {
+    color: var(--primary);
+}
+
+.signup-btn {
+    background-color: var(--primary);
+    color: var(--white);
+
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.signup-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   4. Hero
+========================= */
+
+.hero {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 70px 20px;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-header {
+    margin-bottom: 20px;
+}
+
+.hero-small-title {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.3;
+
+    margin-top: 10px;
+}
+
+.hero h1 strong {
+    color: var(--primary);
+}
+
+.hero-content > p {
+    color: var(--gray);
+    max-width: 500px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.primary-btn {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.secondary-btn {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+.secondary-btn:hover {
+    background-color: var(--light-pink);
+}
+
+
+/* Hero Image */
+
+.hero-image {
+    margin: 0;
+}
+
+.hero-img {
+    width: 100%;
+    display: block;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   5. Services
+========================= */
+
+.services {
+    background-color: var(--light-pink);
+    padding: 60px 20px;
+}
+
+
+/* Section Header */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-header span {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.section-header h2 {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.section-header p {
+    color: var(--gray);
+}
+
+
+/* Service List */
+
+.service-list {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Service Card */
+
+.service-card {
+    background-color: var(--white);
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+
+/* Card Header */
+
+.service-card header {
+    margin-bottom: 15px;
+}
+
+.service-icon {
+    font-size: 30px;
+}
+
+.service-card h3 {
+    margin-top: 5px;
+}
+
+
+/* Card Text */
+
+.service-card > p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+
+/* Card Link */
+
+.card-link {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   6. Footer
+========================= */
+
+.site-footer {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 50px 20px 20px;
+}
+
+
+/* Footer Brand */
+
+.footer-brand p {
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+
+/* Footer Navigation */
+
+.footer-navigation h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-navigation li {
+    margin-bottom: 8px;
+}
+
+.footer-navigation a {
+    color: var(--gray);
+}
+
+.footer-navigation a:hover {
+    color: var(--primary);
+}
+
+
+/* Copyright */
+
+.site-footer small {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--gray);
+}
+
+
+/* =========================
+   7. Responsive
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}
+
